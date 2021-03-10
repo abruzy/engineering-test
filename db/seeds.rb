@@ -12,6 +12,6 @@
     name: Faker::Name.unique.name,
     email: Faker::Internet.email,
     phone: Faker::PhoneNumber.phone_number,
-    status: Faker::Boolean.boolean
+    status: %w[active inactive].sample
   )
 end

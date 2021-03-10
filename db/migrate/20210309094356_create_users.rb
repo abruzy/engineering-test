@@ -5,7 +5,6 @@ class CreateUsers < ActiveRecord::Migration[6.1]
       t.string :email
       t.string :title
       t.string :phone
-      t.boolean :status, default: true
 
       t.timestamps
     end

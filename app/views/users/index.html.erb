@@ -22,9 +22,9 @@
         <td><%= user.name %></td>
         <td><%= user.email %></td>
         <td><%= user.phone %></td>
-        <% if user.status == false %>
+        <% if user.status == "inactive" %>
           <td class="text-danger">Inactive</td>
-        <% elsif user.status == true %>
+        <% elsif user.status == "active" %>
           <td class="text-success">Active</td>
         <% end %>
         <td><%= link_to 'Edit', edit_user_path(user), {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window', class: "btn btn-secondary btn-sm"} %></td>

@@ -26,6 +26,11 @@
       <%= form.label :phone, "Phone", class: "col-form-label" %>
       <%= form.text_field :phone, class: "form-control" %>
     </div>
+
+    <div class="form-group">
+      <%= form.label :status, "Status", class: "col-form-label" %>
+      <%= form.select :status, User.statuses.keys.map { |k, v| [k.humanize, k] }, class: "form-control" %>
+    </div>
   </div>
 
   <div class="modal-footer">
