@@ -34,6 +34,8 @@ gem 'will_paginate', '~> 3.3'
 
 gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.2'
 
+gem 'faker', '~> 2.16'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
