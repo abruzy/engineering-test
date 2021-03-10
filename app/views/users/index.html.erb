@@ -4,6 +4,7 @@
   <table class="table table-striped">
     <thead>
       <tr>
+        <th>S/N</th>
         <th scope="col">Title</th>
         <th scope="col">Name</th>
         <th scope="col">Email</th>
@@ -14,8 +15,9 @@
       </tr>
     </thead>
     <tbody>
-      <% @users.each do |user| %>
+      <% @users.each_with_index do |user, index| %>
       <tr>
+        <td><%= index+=1 %></td>
         <td><%= user.title %></td>
         <td><%= user.name %></td>
         <td><%= user.email %></td>
