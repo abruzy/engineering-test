@@ -21,7 +21,7 @@
   <p align="center">
   This app basically renders a list of users with paginated links and in order of last updated
     <br />
-    <a href="https://github.com/abruzy/url-shortener/blob/develop/README.md"><strong>Explore the docs �</strong></a>
+    <a href="https://github.com/abruzy/user-page/blob/develop/README.md"><strong>Explore the docs �</strong></a>
     <br />
     <br />
   </p>
@@ -88,13 +88,13 @@ ruby-install ruby
 1. Clone the repo
 
 ```sh
-git
+git clone git@github.com:abruzy/user-page.git
 ```
 
 2. The next thing is to change directory folder
 
 ```sh
-cd url-shortener
+cd user-page
 ```
 
 3. The next step is to install our dependencies by running the following command below
@@ -135,11 +135,9 @@ rails db:migrate
 rails db:seed
 ```
 
-7. Voila!!, you did a great job but alas, we need to complete the whole step by actually starting our server by running the command below
+- Starting the rails server using `rails server` isn't ideal since we also want to run the assets-precompilation at the same time. We have a `Procfile` and `Procfile.dev` files set up for this. So you can start the **rails server** and the run **assets-precompilation** at the same time using the command below:
 
-```sh
-rails s
-```
+      PORT=3002 foreman start -f Procfile.dev
 
 8. Now to view the app, we need to visit this url below and you can actually see this in your terminal when you start the server
 
@@ -147,11 +145,11 @@ rails s
 http://localhost:3000/
 ```
 
-## To run test
+## Tests
 
-```sh
-rspec
-```
+- Run `rspec` or `bundle exec rspec` to run all specs
+- This generates coverage report that you can find under `/coverage`
+- To view coverage in your browser, open `/coverage/index.html` after running specs
 
 <!-- USAGE EXAMPLES -->
 
@@ -170,7 +168,7 @@ To add a new user
 
 ## Roadmap
 
-See the [open issues](https://github.com/abruzy/url-shortener/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/abruzy/user-page/issues) for a list of proposed features (and known issues).
 
 <!-- CONTRIBUTING -->
 
@@ -196,7 +194,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 - Abubarkar Diallo: [Github](https://github.com/abruzy)
 
-Project Link: [https://github.com/abruzy/url-shortener](https://github.com/abruzy/url-shortener)
+Project Link: [https://github.com/abruzy/user-page](https://github.com/abruzy/user-page)
 
 <!-- ACKNOWLEDGEMENTS -->
 
@@ -204,12 +202,12 @@ Project Link: [https://github.com/abruzy/url-shortener](https://github.com/abruz
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
 [contributors-shield]: https://img.shields.io/github/contributors/abruzy/facebook-clone
-[contributors-url]: https://github.com/abruzy/url-shortener/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/abruzy/url-shortener
-[forks-url]: https://github.com/abruzy/url-shortener/network/members
-[stars-shield]: https://img.shields.io/github/stars/abruzy/facebook-clone
-[stars-url]: https://github.com/abruzy/url-shortener/stargazers
-[issues-shield]: https://img.shields.io/github/issues/abruzy/facebook-clone
-[issues-url]: https://github.com/abruzy/url-shortener/issues
-[license-shield]: https://img.shields.io/github/license/abruzy/facebook-clone
-[license-url]: https://github.com/abruzy/url-shortener/blob/master/LICENSE.txt
+[contributors-url]: https://github.com/abruzy/user-page/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/abruzy/user-page
+[forks-url]: https://github.com/abruzy/user-page/network/members
+[stars-shield]: https://img.shields.io/github/stars/abruzy/user-page
+[stars-url]: https://github.com/abruzy/user-page/stargazers
+[issues-shield]: https://img.shields.io/github/issues/abruzy/user-page
+[issues-url]: https://github.com/abruzy/user-page/issues
+[license-shield]: https://img.shields.io/github/license/abruzy/user-page
+[license-url]: https://github.com/abruzy/user-page/blob/master/LICENSE.txt
