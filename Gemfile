@@ -28,6 +28,12 @@ gem 'dotenv-rails', '~> 2.7'
 gem 'bootstrap', '~> 4.4.1'
 gem 'jquery-rails'
 
+gem 'simple_form'
+
+gem 'will_paginate', '~> 3.3'
+
+gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.2'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
