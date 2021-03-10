@@ -1,0 +1,34 @@
+<%= form_for @user, remote: true do |form| %>
+  <div class="modal-header">
+    <h5 class="modal-title" id="exampleModalLabel">Edit User</h5>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <div class="modal-body">
+    <div class="form-group">
+      <%= form.label :title, "Title", class: "col-form-label" %>
+      <%= form.text_field :title, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= form.label :name, "Name*", class: "col-form-label" %>
+      <%= form.text_field :name, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= form.label :email, "Email*", class: "col-form-label" %>
+      <%= form.text_field :email, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= form.label :phone, "Phone", class: "col-form-label" %>
+      <%= form.text_field :phone, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="modal-footer">
+    <%= form.submit "Update User", class: "btn btn-primary" %>
+  </div>
+<% end %>

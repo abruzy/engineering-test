@@ -22,6 +22,20 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+# Environment variables gems
+gem 'dotenv-rails', '~> 2.7'
+
+gem 'bootstrap', '~> 4.4.1'
+gem 'jquery-rails'
+
+gem 'simple_form'
+
+gem 'will_paginate', '~> 3.3'
+
+gem 'bootstrap-will_paginate', '~> 1.0'
+
+gem 'faker', '~> 2.16'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
