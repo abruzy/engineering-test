@@ -109,8 +109,6 @@ yarn install
 
 4. create a file called '.env' in your root directory and copy the field below and paste it inside that .env file
 
-NB: please replace, for example 'yourpassword' to 'abruzy9463' with the appropiate details
-
 ```sh
 DATABASE_NAME='yourdatabasename'
 TEST_DATABASE_NAME='yourtestdatabasename'
