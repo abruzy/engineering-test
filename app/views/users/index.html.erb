@@ -1,0 +1,47 @@
+<div class="wrapper">
+  <div class="container">
+  <h1>All Users</h1>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Status</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @users.each do |user| %>
+      <tr>
+        <td><%= user.title %></td>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+        <td><%= user.phone %></td>
+        <% if user.status == false %>
+          <td class="text-danger">Inactive</td>
+        <% elsif user.status == true %>
+          <td class="text-success">Active</td>
+        <% end %>
+        <td><%= link_to 'Edit', edit_user_path(user), {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window', class: "btn btn-secondary btn-sm"} %></td>
+        <td><%= link_to 'Delete', user, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-sm" %>
+        </td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= will_paginate @users, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer %>
+
+  <%= link_to "Add New User", new_user_path, {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window', class: "btn btn-primary m-10"} %>
+</div>
+
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modal-window">
+  <div class="modal-dialog">
+    <div class="modal-content"></div>
+  </div>
+</div>
