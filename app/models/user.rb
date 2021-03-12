@@ -4,6 +4,7 @@ class User < ApplicationRecord
 
   validates :name, presence: true
   validates :phone, presence: true
+  validates :status, presence: true
   validates :email, presence: true, length: { maximum: 255 },
                     format: { with: VALID_EMAIL_REGEX },
                     uniqueness: { case_sensitive: false }
