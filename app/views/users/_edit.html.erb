@@ -7,6 +7,15 @@
   </div>
 
   <div class="modal-body">
+    <% if @user.errors.any? %>
+      <div class="alert alert-danger alert-dismissible fade show">
+        <% @user.errors.full_messages.each do |message| %>
+          <p><strong><%= message %></strong></p>
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <% end %>
+      </div>
+    <% end %>
+
     <div class="form-group">
       <%= form.label :title, "Title", class: "col-form-label" %>
       <%= form.text_field :title, class: "form-control" %>

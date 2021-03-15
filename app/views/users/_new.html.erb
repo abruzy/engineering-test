@@ -7,6 +7,15 @@
   </div>
 
   <div class="modal-body">
+    <% if @user.errors.any? %>
+      <div class="alert alert-danger alert-dismissible fade show">
+        <% @user.errors.full_messages.each do |message| %>
+          <p><strong><%= message %></strong></p>
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <% end %>
+      </div>
+    <% end %>
+
     <div class="form-group">
       <%= form.label :title, "Title", class: "col-form-label" %>
       <%= form.text_field :title, class: "form-control" %>
@@ -14,21 +23,21 @@
 
     <div class="form-group">
       <%= form.label :name, "Name*", class: "col-form-label" %>
-      <%= form.text_field :name, class: "form-control", required: true %>
+      <%= form.text_field :name, class: "form-control" %>
     </div>
 
     <div class="form-group">
       <%= form.label :email, "Email*", class: "col-form-label" %>
-      <%= form.text_field :email, class: "form-control", required: true %>
+      <%= form.text_field :email, class: "form-control" %>
     </div>
 
     <div class="form-group">
       <%= form.label :phone, "Phone*", class: "col-form-label" %>
-      <%= form.text_field :phone, class: "form-control" , required: true%>
+      <%= form.text_field :phone, class: "form-control" %>
     </div>
     <div class="form-group">
       <%= form.label :status, "Status*", class: "col-form-label" %>
-      <%= form.select :status, User.statuses.keys.map { |k, v| [k.humanize, k] }, class: "form-control", required: true %>
+      <%= form.select :status, User.statuses.keys.map { |k, v| [k.humanize, k] }, class: "form-control" %>
     </div>
   </div>
 
